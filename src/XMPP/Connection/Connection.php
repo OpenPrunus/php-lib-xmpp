@@ -30,7 +30,7 @@ class Connection implements ConnectionInterface
     protected $tls;
 
     /**
-     * @var ClientConnection
+     * @var XMPP\Connection\ClientConnection
      */
     protected $client;
 
@@ -126,7 +126,7 @@ class Connection implements ConnectionInterface
      *
      * @return void
      *
-     * @throws Exceptions\ConnectionException
+     * @throws XMPP\Exceptions\ConnectionException
      */
     private function isNotConnectedThrowsException()
     {
