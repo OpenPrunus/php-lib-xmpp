@@ -37,10 +37,10 @@ class Connection implements ConnectionInterface
     /**
      * Constructor
      *
+     * @param ConnectionClientInterface $client
      * @param string $host
      * @param int $port
      * @param int $timeout
-     * @param ressource $context
      */
     public function __construct(ConnectionClientInterface $client, $host, $port, $timeout)
     {
