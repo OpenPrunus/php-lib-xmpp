@@ -1,6 +1,6 @@
 {
-    "name":        "OpenPrunus/php-lib-xmpp",
-    "type":        "library",
+    "name": "OpenPrunus/php-lib-xmpp",
+    "type": "library",
     "description": "PHP lib for XMPP",
     "authors": [
         {
