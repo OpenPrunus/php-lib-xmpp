@@ -20,6 +20,11 @@ class Connection implements ConnectionInterface
     protected $port;
 
     /**
+     * @var string
+     */
+    protected $login;
+
+    /**
      * @var int
      */
     protected $timeout;
@@ -42,13 +47,17 @@ class Connection implements ConnectionInterface
      * @param int $port
      * @param int $timeout
      */
-    public function __construct(ConnectionClientInterface $client, $host, $port, $timeout)
+    public function __construct(ConnectionClientInterface $client, $host, $port, $login, $timeout = false)
     {
-        $this->tls        = false;
-        $this->host       = $host;
-        $this->port       = $port;
-        $this->timeout    = $timeout;
-        $this->client     = $client;
+        $this->tls     = false;
+        $this->host    = $host;
+        $this->port    = $port;
+        $this->login   = $login;
+        $this->client  = $client;
+        $this->timeout = $timeout;
+        if (!$timeout) {
+            $this->timeout = ini_get('default_socket_timeout');
+        }
     }
 
     /**
@@ -119,6 +128,26 @@ class Connection implements ConnectionInterface
         $this->tls = $enable;
 
         return $this->client->crypto($enable);
+    }
+
+    /**
+     * Get host connection
+     *
+     * @return string
+     */
+    public function getHost()
+    {
+        return $this->host;
+    }
+
+    /**
+     * Get login connection
+     *
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
     }
 
     /**

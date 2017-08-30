@@ -11,8 +11,9 @@ class ConnectionTest extends TestCase
      */
     public function setUp()
     {
-        $this->host = 'jabber.org';
-        $this->port = 5222;
+        $this->login   = 'cat@jabber.org';
+        $this->host    = 'jabber.org';
+        $this->port    = 5222;
         $this->timeout = 60*60;
 
         $this->connectionClient = $this->getMockBuilder(ConnectionClient::class)
@@ -21,7 +22,7 @@ class ConnectionTest extends TestCase
                              ->disableArgumentCloning()
                              ->getMock();
 
-        $this->connection = new Connection($this->connectionClient, $this->host, $this->port, $this->timeout);
+        $this->connection = new Connection($this->connectionClient, $this->host, $this->port, $this->login, $this->timeout);
     }
 
     /**

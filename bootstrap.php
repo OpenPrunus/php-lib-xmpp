@@ -1,3 +1,3 @@
 <?php
 
-require 'vendor/composer/autoload_classmap.php';
+require_once 'vendor/autoload.php';

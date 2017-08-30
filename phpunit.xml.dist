@@ -26,6 +26,8 @@
          <testsuites>
              <testsuite>
                  <directory suffix="Test.php">src/Tests/XMPP/Connection/</directory>
+                 <directory suffix="Test.php">src/Tests/XMPP/Stream/Elements/</directory>
+                 <directory suffix="Test.php">src/Tests/XMPP/Stream/XML/</directory>
              </testsuite>
          </testsuites>
 </phpunit>

@@ -25,11 +25,7 @@ class ConnectionClient implements ConnectionClientInterface
     protected $context;
 
     /**
-     * Constructor
-     *
-     * @param ressource $context
-     *
-     * @return ClientConnection
+     * {@inheritdoc}
      */
     public function __construct($context = null)
     {
