@@ -19,6 +19,8 @@ interface StreamXMLInterface
      * @param string $xml
      *
      * @return \SimpleXMLElement
+     *
+     * @throws XMPP\Exceptions\StreamXMLException
      */
     public function parseXML($xml);
 }

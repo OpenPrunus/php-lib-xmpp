@@ -3,9 +3,9 @@
 namespace XMPP\Stream\Elements;
 
 /**
- * MechanismElement model class
+ * MechanismsElement model class
  */
-class MechanismElement implements ElementInterface
+class MechanismsElement implements ElementInterface
 {
     /**
      * @var array
@@ -15,9 +15,9 @@ class MechanismElement implements ElementInterface
     /**
      * Constructor
      *
-     * @param array  $mechanisms
+     * @param array $mechanisms
      *
-     * @return MechanismElement
+     * @return MechanismsElement
      */
     public function __construct(Array $mechanisms = array())
     {

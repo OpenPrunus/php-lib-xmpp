@@ -4,7 +4,7 @@ namespace XMPP\Stream;
 
 use XMPP\Connection\Connection;
 use XMPP\Stream\Elements\StreamElement;
-use XMPP\Stream\Elements\MechanismElement;
+use XMPP\Stream\Elements\MechanismsElement;
 use XMPP\Stream\XML\StreamXML;
 
 class Stream implements StreamInterface
@@ -20,7 +20,7 @@ class Stream implements StreamInterface
     protected $streamElement;
 
     /**
-     * @var MechanismElement
+     * @var MechanismsElement
      */
     protected $mechanisms;
 
@@ -32,10 +32,10 @@ class Stream implements StreamInterface
     /**
      * {@inheritdoc}
      */
-    public function __construct(StreamElement $streamElement, MechanismElement $mechanismElement, StreamXML $streamXML)
+    public function __construct(StreamElement $streamElement, MechanismsElement $mechanismsElement, StreamXML $streamXML)
     {
         $this->streamElement = $streamElement;
-        $this->mechanisms    = $mechanismElement;
+        $this->mechanisms    = $mechanismsElement;
         $this->streamXML     = $streamXML;
         $this->connection    = $streamElement->getConnection();
 
