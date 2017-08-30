@@ -3,7 +3,7 @@
 namespace XMPP\Stream;
 
 use XMPP\Stream\Elements\StreamElement;
-use XMPP\Stream\Elements\MechanismElement;
+use XMPP\Stream\Elements\MechanismsElement;
 use XMPP\Stream\XML\StreamXML;
 
 interface StreamInterface
@@ -11,10 +11,11 @@ interface StreamInterface
     /**
      * Constructor
      *
-     * @param Connection    $connection
-     * @param StreamElement $stream
+     * @param StreamElement     $streamElement
+     * @param MechanismsElement $mechanismsElement
+     * @param StreamXML         $streamXML
      *
      * @return StreamInterface
      */
-    public function __construct(StreamElement $streamElement, MechanismElement $mechanismElement, StreamXML $streamXML);
+    public function __construct(StreamElement $streamElement, MechanismsElement $mechanismsElement, StreamXML $streamXML);
 }
