@@ -7,7 +7,6 @@ use XMPP\Connection\Connection;
 /**
  * StreamElement model class
  *
- * @codeCoverageIgnore
  */
 class StreamElement implements ElementInterface
 {
@@ -66,8 +65,7 @@ class StreamElement implements ElementInterface
     /**
      * Constructor
      *
-     * @param string $from
-     * @param string $to
+     * @param Connection $connection
      *
      * @return StreamElement
      */
@@ -113,6 +111,8 @@ class StreamElement implements ElementInterface
 
     /**
      * Append stream opening template
+     *
+     * @return void
      */
     public function appendStreamOpening()
     {
